@@ -1,0 +1,25 @@
+<div>
+  <h2 class="jumbotron bg-secondary text-white">Personas registradas</h2>
+</div>
+<div><table class="table table-bordered">
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Cedula</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+    <th>Fecha (MM/DD/AAAA)</th>
+  </tr>
+  </thead>
+  <tr *ngFor="let persona of personaService.personaLista;let i = index" >
+    <td>{{persona.Nombre}}</td>
+    <td>{{persona.Apellido}}</td>
+    <td>{{persona.IdPersoona}}</td>
+    <td>{{persona.Direccion}}</td>
+    <td>{{persona.Telefono}}</td>
+    <td>{{persona.FechaNacimiento | date:'short'}}</td>
+  </tr>
+</table>
+
+<button (click)="click()" class="btn btn-success">Registrar</button></div>
